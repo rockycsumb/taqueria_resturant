@@ -2,7 +2,7 @@
   "name": "taqueria_resturant",
   "version": "1.0.0",
   "description": "taqueria resturant",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server",
 	"server": "nodemon server",
