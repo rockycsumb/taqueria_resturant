@@ -22,10 +22,12 @@ const HeroSection = () =>{
 	const onHover = () =>{
 		setHover(!hover);
 	}
+	
+	const image = '';
 	return (
 		<HeroContainer id="home">
 			<HeroBg>
-				<VideoBg autoPlay loop muted src={Video} type='video/mp4' />
+				<VideoBg autoPlay loop muted poster={require('../images/guitarpic.jpg')} src={Video} type='video/mp4' />
 			</HeroBg>
 			<HeroContent>
 				<HeroH1>Taqueria Los Cunados</HeroH1>
