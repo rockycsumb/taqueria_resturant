@@ -60,7 +60,7 @@ const Menu = ({
 	
 	useEffect(()=>{
 		const getMenuData = async () => {
-			await axios.get('https://strapi-test-demo.herokuapp.com/posts')
+			await axios.get('https://taqueria-resturant-strapi.herokuapp.com/menus')
 			.then(response => response)
 			.then(data => {
 				console.log('from use eff ', data);
