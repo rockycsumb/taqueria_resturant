@@ -93,9 +93,9 @@ const Footer = () => {
 				<SocialMedia>
 					<SocialMediaWrap>
 						<SocialLogo to="/" onClick={toggleHome}>
-							Taqueria Los Cunados
+							Taqueria Los Primos
 						</SocialLogo>
-						<WebsiteRights>Taqueria Los Cunados CopyRight {new Date().getFullYear()} All Rights reserved.</WebsiteRights>
+						<WebsiteRights>Taqueria Los Primos CopyRight {new Date().getFullYear()} All Rights reserved.</WebsiteRights>
 						<SocialIcons>
 							<SocialIconLink href="/" target="_blank" aria-label="Facebook">
 								<FaFacebook />

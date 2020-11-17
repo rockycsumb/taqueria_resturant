@@ -43,7 +43,7 @@ const Navbar = ({toggle}) =>{
 								Taqueria
 							</div>
 							<div>
-								Los Cunados
+								Los Primos
 							</div>
 						</NavLogo>
 						<MobileIcon onClick={toggle} >

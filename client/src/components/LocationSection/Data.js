@@ -4,7 +4,7 @@ export const locationData = {
 	lightText: false,
 	lightTextDesc: false,
 	topLine: 'Located in South bay',
-	headLine: 'At McCarthy Ranch in Milpitas',
+	headLine: 'At Great Mall in Milpitas',
 	description: 'Outdoor seating is open, indoor seating is available upon reservation. Indoor ordering is available however online order is preferred',
 	buttonLabel: 'Get Started',
 	imgStart: false,

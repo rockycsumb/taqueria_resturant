@@ -30,7 +30,7 @@ const HeroSection = () =>{
 				<VideoBg autoPlay loop muted src={Video} poster={require('../images/taqueria1.jpg')} type='video/mp4' />
 			</HeroBg>
 			<HeroContent>
-				<HeroH1>Taqueria Los Cunados</HeroH1>
+				<HeroH1>Taqueria Los Primos</HeroH1>
 				<HeroP>
 					Delicious Mexican food, tacos, burritos,
 					quesadillas, tortas and more. Catering available.
