@@ -146,6 +146,12 @@ export const MenuItem = styled.div`
 	font-size: 18px;
 	color: #010606;
 `
+export const MenuDescription= styled.span`
+	font-size: 10px;
+	color: #010606;
+ 	font-style: italic;
+	margin-left: 5px;
+`
 
 export const MenuItemButton = styled.button`
 	border-radius: 30px;

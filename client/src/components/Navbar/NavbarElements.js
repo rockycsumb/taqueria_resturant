@@ -42,6 +42,7 @@ export const NavLogo = styled(LinkR)`
 	background: #ce1126;
 	width: 150px;
 	height: 100px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,.3);
 
 	& div {
 		font-family: 'Londrina Solid', cursive;	

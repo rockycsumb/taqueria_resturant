@@ -40,20 +40,10 @@ const Menu = ({
 	dark2
 }) =>{
 	
-	const[displayInfo, setDisplayInfo] = useState([
-			{item: "Lunch Taco", price: 2.99},
-			{item: "Lunch Burrito", price: 5.99},
-			{item: "Lunch Nachos", price: 5.99},
-			{item: "Lunch Burrito", price: 5.99},
-			{item: "Lunch Nachos", price: 5.99},
-			{item: "Lunch Burrito", price: 5.99},
-			{item: "Lunch Nachos", price: 5.99},
-			{item: "Lunch Burrito", price: 5.99},
-			{item: "Lunch Nachos", price: 5.99},
-			{item: "Lunch Burrito", price: 5.99}
-	])
-	const[menuItemSelect, setMenuItemSelect] = useState("Lunch");
+	const[displayInfo, setDisplayInfo] = useState([])
+	const[fullMenu, setFullMenu] = useState([]);
 	
+	const[menuItemSelect, setMenuItemSelect] = useState("Lunch");
 	const[switching, setSwitching] = useState(false);
 	
 	
@@ -63,19 +53,14 @@ const Menu = ({
 			await axios.get('https://taqueria-resturant-strapi.herokuapp.com/menus')
 			.then(response => response)
 			.then(data => {
-				console.log('from use eff ', data);
+				setFullMenu(data.data);
+				setDisplayInfo(data.data);
 			})
 		}
+		
 		getMenuData();
-	}, []);
-	  
-	
-	
-	
-	useEffect(()=>{
 		
-		
-	}, displayInfo, switching, menuItemSelect);
+	},[]);
 	
 	let menuItem = [
 		"Lunch",
@@ -84,38 +69,9 @@ const Menu = ({
 	]
 	
 	let menuItemInfo = {
-		Lunch: [
-			{item: "Lunch Taco", price: 2.99},
-			{item: "Lunch Burrito", price: 5.99},
-			{item: "Lunch Nachos", price: 5.99},
-			{item: "Lunch Burrito", price: 5.99},
-			{item: "Lunch Nachos", price: 5.99},
-			{item: "Lunch Burrito", price: 5.99},
-			{item: "Lunch Nachos", price: 5.99},
-			{item: "Lunch Burrito", price: 5.99},
-			{item: "Lunch Nachos", price: 5.99}
-		],
-		Tacos: [
-			{item: "Taco Taco", price: 2.99},
-			{item: "Taco Burrito", price: 5.99},
-			{item: "Taco Nachos", price: 5.99},
-			{item: "Taco Burrito", price: 5.99},
-			{item: "Taco Nachos", price: 5.99},
-			{item: "Taco Burrito", price: 5.99},
-			{item: "Taco Nachos", price: 5.99},
-			{item: "Taco Burrito", price: 5.99},
-			{item: "Taco Nachos", price: 5.99}
-		],
-		Catering: [
-			{item: "Catering Taco", price: 2.99},
-			{item: "Catering Burrito", price: 5.99},
-			{item: "Catering Nachos", price: 5.99},
-			{item: "Catering Burrito", price: 5.99},
-			{item: "Catering Nachos", price: 5.99},
-			{item: "Catering Burrito", price: 5.99},
-			{item: "Catering Nachos", price: 5.99},
-			{item: "Catering Burrito", price: 5.99}
-		]
+		Lunch: fullMenu,
+		Tacos: fullMenu,
+		Catering: fullMenu
 	}
 	
 	const handleClick = e =>{
@@ -173,7 +129,7 @@ const Menu = ({
 									))
 								}
 								
-								{switching ? (
+								{switching || displayInfo.length < 1 ? (
 									<IconContainer>
 										<Icon className="shaking"/>
 									</IconContainer>

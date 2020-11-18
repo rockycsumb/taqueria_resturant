@@ -5,22 +5,25 @@ import {
 	MenuDisplayContainer,
 	MenuList,
 	MenuItem,
-	MenuPrice
+	MenuPrice,
+	MenuDescription
 } from './MenuElements';
 
 const MenuDisplay = ({info}) =>{
-	console.log(info)
-	
 	return ( 
 		
 		<MenuDisplayContainer>
 				{info.map(item =>(
 				<MenuList>
 					<MenuItem>
-						{item.item}
+						{item.menu_item_title}
+						<MenuDescription>
+							{item.menu_item_description}
+						</MenuDescription>
 					</MenuItem>
+					
 					<MenuPrice>
-						${item.price}
+						${item.menu_item_price}
 					</MenuPrice>
 				</MenuList>	
 				))}
