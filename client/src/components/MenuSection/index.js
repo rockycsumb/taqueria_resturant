@@ -20,7 +20,8 @@ import {
 	Img,
 	IconContainer,
 	Icon,
-	MenuItemButton
+	MenuItemButton,
+	MenuLoading
 } from './MenuElements';
 
 const Menu = ({
@@ -130,9 +131,16 @@ const Menu = ({
 								}
 								
 								{switching || displayInfo.length < 1 ? (
-									<IconContainer>
-										<Icon className="shaking"/>
-									</IconContainer>
+									<>
+										
+										<IconContainer>
+											<Icon className="shaking"/>
+										</IconContainer>
+									<MenuLoading>
+											<Subtitle darkText={darkText}>Loading...</Subtitle>
+										</MenuLoading>
+									
+									</>
 										
 									):(
 									<MenuDisplay info={displayInfo} />
